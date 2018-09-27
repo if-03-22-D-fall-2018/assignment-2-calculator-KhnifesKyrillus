@@ -42,6 +42,14 @@ int FirstOpertor()
   scanf("%d\n", &firstOprator );
   return firstOprator;
 }
+int SecondOpertor()
+{
+  int secondOprator;
+
+  printf("Please enter the first operand: ", );
+  scanf("%d\n", &secondOprator );
+  return secondOprator;
+}
 int Subtraction(int firstOperator,int secondOperator)
 {
 
