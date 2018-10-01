@@ -15,7 +15,7 @@ int main(int argc, const char *argv[])
     scanf("%d\n", &input);
     if (input<5 && input>=-1)
     {
-      printf("Input was invalid!!!\n" );
+      printf("Input is invalid!!!\n" );
       return 0;
     }
     switch (input)
@@ -27,7 +27,7 @@ int main(int argc, const char *argv[])
 
             break;
         case 2:
-          
+
             break;
         case 3:
 
