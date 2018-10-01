@@ -5,19 +5,21 @@ int GetSecondOperand();
 
 int main(int argc, const char *argv[])
 {
+  do {
     printf("Choose one of the following operations:\n");
-    printf("\tAdd (1)\n");
-    printf("\tSubtract (2)\n");
-    printf("\tMultiply (3)\n");
-    printf("\tDivide (4)\n");
-    printf("\tStop program (-1)\n");
+    printf("Add (1)\n");
+    printf("Subtract (2)\n");
+    printf("Multiply (3)\n");
+    printf("Divide (4)\n");
+    printf("Stop program (-1)\n");
     int input;
     scanf("%d\n", &input);
     if (input<5 && input>=-1)
     {
       printf("Input is invalid!!!\n" );
-      return 0;
     }
+  } while(input<5 && input>=-1);
+
     switch (input)
     {
         case -1:
