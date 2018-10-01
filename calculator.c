@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+int GetFirstOperand();
+int GetSecondOperand();
+
 int main(int argc, const char *argv[])
 {
     iprintf("Choose one of the following operations:\n");
@@ -15,12 +18,6 @@ int main(int argc, const char *argv[])
       printf("Input was invalid!!!\n", );
       return 0;
     }
-    int firstOprator;
-    printf("Please enter the first operand: \n", );
-    scanf("%d\n", &firstOprator);
-    int secondOperator;
-    printf("Please enter the second operand: \n", );
-    scanf("%d\n", &secondOprator);
     switch (input)
     {
         case -1:
@@ -41,4 +38,19 @@ int main(int argc, const char *argv[])
     }
 
     return 0;
+}
+
+int GetFirstOperand()
+{
+  int firstOprator;
+  printf("Please enter the first operand: \n", );
+  scanf("%d\n", &firstOprator);
+  return firstOprator;
+}
+int GetSecondOperand()
+{
+  int secondOperator;
+  printf("Please enter the second operand: \n", );
+  scanf("%d\n", &secondOprator);
+  return secondOprator;
 }
