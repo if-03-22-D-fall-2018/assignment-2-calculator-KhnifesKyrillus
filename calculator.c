@@ -10,6 +10,17 @@ int main(int argc, const char *argv[])
     printf("\tStop program (-1)\n");
     int input;
     scanf("%d\n", &input);
+    if (input<5 && input>=-1)
+    {
+      printf("Input was invalid!!!\n", );
+      return 0;
+    }
+    int firstOprator;
+    printf("Please enter the first operand: \n", );
+    scanf("%d\n", &firstOprator);
+    int secondOperator;
+    printf("Please enter the second operand: \n", );
+    scanf("%d\n", &secondOprator);
     switch (input)
     {
         case -1:
@@ -27,18 +38,7 @@ int main(int argc, const char *argv[])
         case 4:
 
             break;
-        case default:
-          printf("Input is not valid!!!\n");
-            break;
     }
 
     return 0;
-}
-int FirstOpertor()
-{
-  int firstOprator;
-
-  printf("Please enter the first operand: ", );
-  scanf("%d\n", &firstOprator );
-  return firstOprator;
 }
