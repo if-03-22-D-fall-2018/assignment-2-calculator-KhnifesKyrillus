@@ -5,7 +5,7 @@ int GetSecondOperand();
 
 int main(int argc, const char *argv[])
 {
-    iprintf("Choose one of the following operations:\n");
+    printf("Choose one of the following operations:\n");
     printf("\tAdd (1)\n");
     printf("\tSubtract (2)\n");
     printf("\tMultiply (3)\n");
@@ -15,7 +15,7 @@ int main(int argc, const char *argv[])
     scanf("%d\n", &input);
     if (input<5 && input>=-1)
     {
-      printf("Input was invalid!!!\n", );
+      printf("Input was invalid!!!\n" );
       return 0;
     }
     switch (input)
@@ -27,7 +27,7 @@ int main(int argc, const char *argv[])
 
             break;
         case 2:
-          Subtraction();
+          
             break;
         case 3:
 
@@ -42,15 +42,15 @@ int main(int argc, const char *argv[])
 
 int GetFirstOperand()
 {
-  int firstOprator;
-  printf("Please enter the first operand: \n", );
-  scanf("%d\n", &firstOprator);
-  return firstOprator;
+  int firstOperator;
+  printf("Please enter the first operand: \n" );
+  scanf("%d\n", &firstOperator);
+  return firstOperator;
 }
 int GetSecondOperand()
 {
   int secondOperator;
-  printf("Please enter the second operand: \n", );
-  scanf("%d\n", &secondOprator);
-  return secondOprator;
+  printf("Please enter the second operand: \n" );
+  scanf("%d\n", &secondOperator);
+  return secondOperator;
 }
