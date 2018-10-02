@@ -1,8 +1,20 @@
+/*----------------------------------------------------------
+ *				HTBLA-Leonding / Class: 2DHIF
+ * ---------------------------------------------------------
+ * Exercise Number: 02
+ * Title:			  Calculator
+ * Author:			Khnifes Kyrillus
+ * ----------------------------------------------------------
+ * Description:
+ * The User enters which calculus he wants to choice and then he
+ * chooses the two numbers he wants.
+ *the number is valid (no division by 0, underflow and overflow error)
+  ----------------------------------------------------------*/
+
 #include <stdio.h>
 #include <float.h>
 
-double GetFirstOperand();
-double GetSecondOperand();
+void GetOperands(double* firstOperand, double* secondOperand);
 double Division(double firstOperand,double secondOperand);
 double Addition(double firstOperand,double secondOperand);
 double Subtraction(double firstOperand,double secondOperand);
@@ -17,9 +29,9 @@ int main(int argc, const char *argv[])
     printf("Program stopped!\n");
     return 0;
   }
-  //printf("%.10e\n",DBL_MIN );
-  double firstOperand=GetFirstOperand();
-  double secondOperand=GetSecondOperand();
+  double firstOperand;
+  double secondOperand;
+  GetOperands(&firstOperand,&secondOperand);
   double result;
   switch (choice)
   {
@@ -61,7 +73,7 @@ int main(int argc, const char *argv[])
 
 int Menu()
 {
-  int choice;
+  int choice=-1;
   do
   {
     printf("Choose one of the following operations:\n\n");
@@ -72,11 +84,11 @@ int Menu()
     printf("\tStop program (-1)\n\n");
     printf("Enter your choice: ");
     scanf("%d", &choice);
-    if (choice>4 && choice<-1)
+    if (choice>4 || choice==0 || choice<-1)
     {
       printf("Input not allowed, please try again\n" );
     }
-  }while(choice>4 && choice<-1);
+  }while(choice>4 || choice==0 || choice<-1);
   return choice;
 }
 
@@ -104,18 +116,11 @@ double Subtraction(double firstOperand,double secondOperand)
   return result;
 }
 
-double GetFirstOperand()
+void GetOperands(double* firstOperand, double* secondOperand)
 {
-  double firstOperator;
   printf("Please enter the first operand: \n" );
-  scanf("%lf", &firstOperator);
-  return firstOperator;
-}
-
-double GetSecondOperand()
-{
-  double secondOperator;
-  printf("Please enter the second operand: \n\n" );
-  scanf("%lf", &secondOperator);
-  return secondOperator;
+  scanf("%lf", firstOperand);
+  printf("Please enter the second operand: \n" );
+  scanf("%lf", secondOperand);
+  printf("\n");
 }
