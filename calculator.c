@@ -15,11 +15,11 @@ int main(int argc, const char *argv[])
     printf("Divide (4)\n");
     printf("Stop program (-1)\n\n");
     scanf("%d", &input);
-    if (input>5 && input>=-1)
+    if (input>5 && input<-1)
     {
       printf("Input is invalid!!!\n" );
     }
-  }while(input<5 && input>=-1);
+  }while(input>5 && input<-1);
   int firstOperand=GetFirstOperand();
   int secondOperand=GetSecondOperand();
   switch (input)
